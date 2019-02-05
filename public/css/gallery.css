@@ -1,0 +1,35 @@
+/*!
+ *  _   _      _     _ _ 
+ * | | | | ___(_) __| (_)
+ * | |_| |/ _ \ |/ _` | |
+ * |  _  |  __/ | (_| | |
+ * |_| |_|\___|_|\__,_|_|
+ *                       
+ * Gallery stylesheet for jekyll theme Heidi.
+ * Released under MIT license by @petoem. Learn more at
+ * https://github.com/petoem/heidi.
+ */
+
+.content {
+  max-width: 100%;
+}
+
+.gallery-grid {
+  line-height: 0;
+  column-width: 300px;
+  column-gap: 0px;
+}
+
+.gallery-grid div {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.gallery-grid img {
+  filter: brightness(1);
+  transition: filter .3s ease-out;
+}
+
+.gallery-grid img:hover {
+  filter: brightness(0.5);
+}

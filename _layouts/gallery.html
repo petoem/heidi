@@ -1,0 +1,47 @@
+---
+layout: page
+---
+
+{% comment %}
+This layout file is used as a base for a gallery page.
+Usage: 
+# works:
+#   - title: Nice images
+#     images:
+#       - /image_one
+#       - /image_two
+#       ...
+#   - title: More images
+#     images:
+#       - /another/image
+#       ...
+#   ...
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/css/gallery.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chocolat@0.4.21/dist/css/chocolat.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chocolat@0.4.21/dist/js/jquery.chocolat.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#gallery').Chocolat({
+      imageSize: 'contain',
+      enableZoom: 'true'
+    });
+  });
+</script>
+<div id="gallery" data-chocolat-title="{{ page.title }}">
+  {% for work in page.works %}
+  <h2>{{ work.title }}</h2>
+  <div class="gallery-grid">
+    {% for image in work.images %}
+    <div>
+      {% assign image_page = site.pages | where: 'permalink',image %}
+      <a class="chocolat-image" href="{{ image_page.first.image_url }}" title="{{ image_page.first.title }} - {{ image_page.first.description }}">
+        <img alt="{{ image_page.first.image_alt }}" src="{{ image_page.first.image_url }}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

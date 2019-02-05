@@ -1,0 +1,21 @@
+---
+layout: page
+category: other
+---
+
+{% comment %}
+This layout represents an image with the following attr.
+- `image_url` Path to where the image is.
+- `image_alt` Alternate text for image.
+- `description` Some information about this images.
+In addition following attr. are required:
+- `title` Title of the image.
+- `permalink` Makes pretty URLs and can be used in layout gallery
+{% endcomment %}
+
+<figure>
+  <img src="{{ page.image_url }}" alt="{{ page.image_alt }}">
+  <figcaption>
+    {{ page.description }}
+  </figcaption>
+</figure>

@@ -1,52 +1,41 @@
-# heidi
+# Heidi
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+`Heidi` is a clean [Jekyll](http://jekyllrb.com) theme/template for artists, photographers etc. that want to showcase themselves and their works. 
+It's based on [Hyde](https://github.com/poole/hyde) by [@mdo](https://github.com/mdo).
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+## Features
 
-TODO: Delete this and the text above, and describe your gem
+In addition to the features of [`Hyde`](https://github.com/poole/hyde), `Heidi` adds the following: 
 
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "heidi"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: heidi
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install heidi
+- `gallery` layout that can be populated with images from pages that have `image` layout
+- Multilingual and i18n support using `jekyll-polyglot`
+- Metadata tags for search engines and social networks using `jekyll-seo-tag`
+- Minified HTML, CSS and JavaScript assets with `jekyll-minifier`
+- Uses `kramdown` for markdown and `rouge` as highlighter
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+1. Clone or fork `Heidi` repository
+2. Install [jekyllrb](https://jekyllrb.com/docs/)
+3. Install dependencies `cd heidi && bundle install --path .bundle`
+4. Edit website content
+5. Build the site `bundle exec jekyll build`
+6. Your static site is in `_site` directory
+
+For more help regarding Jekyll goto their [website](http://jekyllrb.com).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+1. [Fork it!](https://github.com/petoem/heidi/fork)
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
 
-## Development
+## Contributors
 
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `heidi.gemspec` accordingly.
+- [petoem](https://github.com/petoem) Michael Petö - creator, maintainer
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+Open sourced under the [MIT license](LICENSE).
