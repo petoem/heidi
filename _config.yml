@@ -37,8 +37,8 @@ plugins:
   - jekyll-paginate
 
 include:
-  - _page
-  - _image
+  - _pages
+  - _images
 
 # Permalinks
 permalink: pretty
