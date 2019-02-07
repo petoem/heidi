@@ -2,6 +2,7 @@
 layout: gallery
 title: Gallery
 permalink: /gallery/
+nav_weight: 2
 lang: en
 works:
   - title: Neon Photos

@@ -15,10 +15,10 @@
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter.
+        `layout: page` in the front-matter and sorted on `nav_weight`.
       {% endcomment %}
 
-      {% assign pages_list = site.pages %}
+      {% assign pages_list = site.pages | sort:"nav_weight" %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" or node.layout == "gallery" %}
